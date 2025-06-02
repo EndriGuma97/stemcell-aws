@@ -17,6 +17,7 @@
         --dark: #0a0a0a;
         --light: #ffffff;
         --gray: #e0e0e0;
+        --saddle-green: #8b6f47;
       }
 
       body {
@@ -215,15 +216,25 @@
         font-weight: 600;
         color: rgba(255, 255, 255, 0.9);
         text-align: center;
-        margin-bottom: 50px;
+        margin-bottom: 30px;
         animation: fadeIn 1s ease-out 0.3s both;
+      }
+
+      .hero-intro {
+        text-align: center;
+        max-width: 900px;
+        margin: 0 auto 60px;
+        font-size: 1.1rem;
+        line-height: 1.8;
+        color: rgba(255, 255, 255, 0.9);
+        animation: fadeIn 1s ease-out 0.5s both;
       }
 
       .hero-grid {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1.5fr 1fr;
         gap: 60px;
-        align-items: center;
+        align-items: start;
       }
 
       .hero-text {
@@ -231,6 +242,24 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+      }
+
+      .possibilities-box {
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(87, 188, 151, 0.3);
+        border-radius: 20px;
+        padding: 30px;
+        margin-bottom: 35px;
+        animation: fadeIn 1s ease-out 0.7s both;
+        box-shadow: 0 10px 30px rgba(139, 111, 71, 0.3);
+      }
+
+      .possibilities-box h3 {
+        color: var(--primary);
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+        text-align: center;
       }
 
       @keyframes slideInLeft {
@@ -267,8 +296,7 @@
       .hero-text ul {
         list-style: none;
         padding: 0;
-        margin-bottom: 35px;
-        animation: fadeIn 1s ease-out 0.5s both;
+        margin: 0;
       }
 
       .hero-text ul li {
@@ -283,7 +311,7 @@
         content: "•";
         position: absolute;
         left: 0;
-        color: var(--primary);
+        color: var(--saddle-green);
         font-size: 1.5rem;
         line-height: 1.2;
       }
@@ -306,7 +334,7 @@
         display: flex;
         align-items: center;
         gap: 20px;
-        padding: 25px;
+        padding: 0px 10px;
         background: rgba(255, 255, 255, 0.05);
         backdrop-filter: blur(10px);
         border: 1px solid rgba(87, 188, 151, 0.3);
@@ -431,6 +459,8 @@
         animation: slideInRight 1s ease-out;
         cursor: pointer;
         width: 100%;
+        max-width: 400px;
+        margin-left: auto;
       }
 
       @keyframes slideInRight {
@@ -450,14 +480,16 @@
         height: 0;
         overflow: hidden;
         border-radius: 20px;
-        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+        border: 1px solid rgba(87, 188, 151, 0.3);
+        box-shadow: 0 20px 60px rgba(139, 111, 71, 0.4);
         transition: all 0.3s ease;
         cursor: pointer;
       }
 
       .video-wrapper:hover {
         transform: scale(1.02);
-        box-shadow: 0 30px 80px rgba(87, 188, 151, 0.3);
+        box-shadow: 0 30px 80px rgba(139, 111, 71, 0.5);
+        border-color: #a08060;
       }
 
       .video-thumbnail {
@@ -467,7 +499,7 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
-        border-radius: 20px;
+        border-radius: 16px;
       }
 
       .play-button {
@@ -790,12 +822,17 @@
 
         .hero-subtitle {
           font-size: 1.3rem;
+          margin-bottom: 20px;
+        }
+
+        .hero-intro {
+          font-size: 1rem;
           margin-bottom: 40px;
         }
 
         .video-container {
           order: 1;
-          max-width: 600px;
+          max-width: 100%;
           margin: 0 auto 40px;
         }
 
@@ -804,10 +841,18 @@
           text-align: center;
         }
 
+        .possibilities-box {
+          text-align: left;
+        }
+
+        .possibilities-box h3 {
+          text-align: center;
+        }
+
         .hero-text ul {
           text-align: left;
           max-width: 600px;
-          margin: 0 auto 30px;
+          margin: 0 auto;
         }
 
         .hero-text p {
@@ -854,7 +899,23 @@
         .hero-subtitle {
           font-size: 1.1rem;
           line-height: 1.4;
+          margin-bottom: 15px;
+        }
+
+        .hero-intro {
+          font-size: 0.95rem;
+          line-height: 1.6;
           margin-bottom: 30px;
+        }
+
+        .possibilities-box {
+          padding: 20px;
+          margin-bottom: 25px;
+        }
+
+        .possibilities-box h3 {
+          font-size: 1.4rem;
+          margin-bottom: 15px;
         }
 
         .hero-text p {
@@ -869,7 +930,7 @@
         }
 
         .personal-message {
-          padding: 20px;
+          padding: 0px 10px;
           gap: 15px;
           margin-bottom: 25px;
         }
@@ -902,10 +963,11 @@
 
         .video-wrapper {
           border-radius: 15px;
+          border-width: 3px;
         }
 
         .video-thumbnail {
-          border-radius: 15px;
+          border-radius: 12px;
         }
 
         .play-button {
@@ -995,33 +1057,36 @@
           When Conventional Medicine Reaches Its Limits, We Begin
         </h2>
 
+        <p class="hero-intro">
+          Every physician encounters cases where traditional treatments fall
+          short. Our partnership provides you with evidence-based regenerative
+          medicine options that can make the difference for your most
+          challenging patients.
+        </p>
+
         <div class="hero-grid">
           <div class="hero-text">
-            <p>
-              Every physician encounters cases where traditional treatments fall
-              short. Our partnership provides you with evidence-based
-              regenerative medicine options that can make the difference for
-              your most challenging patients.
-            </p>
-            <p><strong>Unlock New Possibilities:</strong></p>
-            <ul>
-              <li>
-                <strong>Complex Cases</strong> - Advanced therapies for
-                conditions with limited conventional options
-              </li>
-              <li>
-                <strong>Enhanced Outcomes</strong> - Regenerative approaches
-                that address root causes, not just symptoms
-              </li>
-              <li>
-                <strong>Professional Growth</strong> - Join physicians at the
-                forefront of medical innovation
-              </li>
-              <li>
-                <strong>Patient Satisfaction</strong> - Offer hope where
-                traditional medicine offers limitations
-              </li>
-            </ul>
+            <div class="possibilities-box">
+              <h3>Unlock New Possibilities:</h3>
+              <ul>
+                <li>
+                  <strong>Complex Cases</strong><br />Advanced therapies for
+                  conditions with limited conventional options
+                </li>
+                <li>
+                  <strong>Enhanced Outcomes</strong><br />Regenerative
+                  approaches that address root causes, not just symptoms
+                </li>
+                <li>
+                  <strong>Professional Growth</strong><br />Join physicians at
+                  the forefront of medical innovation
+                </li>
+                <li>
+                  <strong>Patient Satisfaction</strong><br />Offer hope where
+                  traditional medicine offers limitations
+                </li>
+              </ul>
+            </div>
 
             <div class="personal-message" onclick="playAudio()">
               <div class="message-icon"></div>
