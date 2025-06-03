@@ -109,6 +109,7 @@
         display: flex;
         align-items: center;
         overflow: hidden;
+        padding: 120px 0 80px;
       }
 
       .video-background {
@@ -186,16 +187,17 @@
         position: relative;
         z-index: 2;
         width: 100%;
-        max-width: 1400px;
+        max-width: 1600px;
         margin: 0 auto;
         padding: 0 40px;
+        text-align: center;
       }
 
       .hero-title {
         font-size: clamp(2.5rem, 5vw, 4rem);
         font-weight: 800;
-        line-height: 1.1;
-        margin-bottom: 20px;
+        line-height: 1.2;
+        margin: 0 auto 30px;
         background: linear-gradient(
           135deg,
           var(--light) 0%,
@@ -208,7 +210,8 @@
         animation: shimmer 3s ease-in-out infinite;
         background-size: 200% 200%;
         text-align: center;
-        width: 100%;
+        max-width: 1200px;
+        padding: 0 20px;
       }
 
       .hero-subtitle {
@@ -216,50 +219,21 @@
         font-weight: 600;
         color: rgba(255, 255, 255, 0.9);
         text-align: center;
-        margin-bottom: 30px;
+        margin: 0 auto 40px;
         animation: fadeIn 1s ease-out 0.3s both;
+        max-width: 900px;
+        padding: 0 20px;
       }
 
       .hero-intro {
         text-align: center;
-        max-width: 900px;
+        max-width: 1000px;
         margin: 0 auto 60px;
-        font-size: 1.1rem;
+        font-size: 1.15rem;
         line-height: 1.8;
         color: rgba(255, 255, 255, 0.9);
         animation: fadeIn 1s ease-out 0.5s both;
-      }
-
-      .hero-grid {
-        display: grid;
-        grid-template-columns: 1.5fr 1fr;
-        gap: 60px;
-        align-items: start;
-      }
-
-      .hero-text {
-        animation: slideInLeft 1s ease-out;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-      }
-
-      .possibilities-box {
-        background: rgba(255, 255, 255, 0.05);
-        backdrop-filter: blur(10px);
-        border: 1px solid rgba(87, 188, 151, 0.3);
-        border-radius: 20px;
-        padding: 30px;
-        margin-bottom: 35px;
-        animation: fadeIn 1s ease-out 0.7s both;
-        box-shadow: 0 10px 30px rgba(139, 111, 71, 0.3);
-      }
-
-      .possibilities-box h3 {
-        color: var(--primary);
-        font-size: 1.8rem;
-        margin-bottom: 20px;
-        text-align: center;
+        padding: 0 20px;
       }
 
       @keyframes slideInLeft {
@@ -285,42 +259,6 @@
         }
       }
 
-      .hero-text p {
-        font-size: 1.1rem;
-        line-height: 1.8;
-        color: rgba(255, 255, 255, 0.9);
-        margin-bottom: 25px;
-        animation: fadeIn 1s ease-out 0.3s both;
-      }
-
-      .hero-text ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-      }
-
-      .hero-text ul li {
-        position: relative;
-        padding-left: 30px;
-        margin-bottom: 15px;
-        line-height: 1.6;
-        color: rgba(255, 255, 255, 0.9);
-      }
-
-      .hero-text ul li:before {
-        content: "•";
-        position: absolute;
-        left: 0;
-        color: var(--saddle-green);
-        font-size: 1.5rem;
-        line-height: 1.2;
-      }
-
-      .hero-text ul li strong {
-        color: var(--primary);
-        font-weight: 600;
-      }
-
       @keyframes fadeIn {
         from {
           opacity: 0;
@@ -331,18 +269,19 @@
       }
 
       .personal-message {
-        display: flex;
+        display: inline-flex;
         align-items: center;
-        gap: 20px;
-        padding: 0px 10px;
+        gap: 25px;
+        padding: 20px 30px;
         background: rgba(255, 255, 255, 0.05);
         backdrop-filter: blur(10px);
         border: 1px solid rgba(87, 188, 151, 0.3);
         border-radius: 15px;
-        margin-bottom: 30px;
+        margin: 0 auto 50px;
         animation: fadeIn 1s ease-out 0.6s both;
         transition: all 0.3s ease;
         cursor: pointer;
+        max-width: 700px;
       }
 
       .personal-message:hover {
@@ -415,63 +354,25 @@
         }
       }
 
-      .cta-button {
-        display: inline-block;
-        padding: 18px 40px;
-        background: linear-gradient(135deg, var(--primary), var(--secondary));
-        color: white;
-        text-decoration: none;
-        font-size: 1.1rem;
-        font-weight: 600;
-        border-radius: 50px;
-        transition: all 0.3s ease;
-        animation: fadeIn 1s ease-out 0.9s both;
-        position: relative;
-        overflow: hidden;
+      .personal-message h3 {
+        font-size: 1.3rem;
+        margin: 0;
       }
 
-      .cta-button:before {
-        content: "";
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        width: 0;
-        height: 0;
-        background: rgba(255, 255, 255, 0.2);
-        border-radius: 50%;
-        transform: translate(-50%, -50%);
-        transition: width 0.6s, height 0.6s;
-      }
-
-      .cta-button:hover:before {
-        width: 300px;
-        height: 300px;
-      }
-
-      .cta-button:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 10px 30px rgba(87, 188, 151, 0.4);
+      .personal-message p {
+        font-size: 1rem;
+        margin: 10px 0 0;
+        color: rgba(255, 255, 255, 0.8);
       }
 
       /* Video Container */
       .video-container {
         position: relative;
-        animation: slideInRight 1s ease-out;
+        animation: fadeIn 1s ease-out 0.8s both;
         cursor: pointer;
         width: 100%;
-        max-width: 400px;
-        margin-left: auto;
-      }
-
-      @keyframes slideInRight {
-        from {
-          opacity: 0;
-          transform: translateX(50px);
-        }
-        to {
-          opacity: 1;
-          transform: translateX(0);
-        }
+        max-width: 1000px;
+        margin: 0 auto 60px;
       }
 
       .video-wrapper {
@@ -568,6 +469,56 @@
         fill: white;
       }
 
+      /* Possibilities Box */
+      .possibilities-box {
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(87, 188, 151, 0.3);
+        border-radius: 20px;
+        padding: 50px;
+        margin: 0 auto 50px;
+        animation: fadeIn 1s ease-out 1s both;
+        box-shadow: 0 10px 30px rgba(139, 111, 71, 0.3);
+        max-width: 1000px;
+        text-align: left;
+      }
+
+      .possibilities-box h3 {
+        color: var(--primary);
+        font-size: 2rem;
+        margin-bottom: 30px;
+        text-align: center;
+      }
+
+      .possibilities-box ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .possibilities-box ul li {
+        position: relative;
+        padding-left: 35px;
+        margin-bottom: 25px;
+        line-height: 1.7;
+        color: rgba(255, 255, 255, 0.9);
+        font-size: 1.05rem;
+      }
+
+      .possibilities-box ul li:before {
+        content: "•";
+        position: absolute;
+        left: 0;
+        color: var(--saddle-green);
+        font-size: 1.5rem;
+        line-height: 1.2;
+      }
+
+      .possibilities-box ul li strong {
+        color: var(--primary);
+        font-weight: 600;
+      }
+
       /* Fullscreen Video */
       .video-fullscreen {
         position: fixed;
@@ -658,53 +609,22 @@
       /* Form Section */
       .form-section {
         padding: 100px 40px;
-        background: url("/form.jpg") center/cover;
+        background: url("/form.jpg") no-repeat center center;
+        background-size: cover;
         position: relative;
-        overflow: hidden;
-      }
-
-      .form-section:before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(10, 10, 10, 0.7);
-        z-index: 0;
-      }
-
-      .form-section:after {
-        content: "";
-        position: absolute;
-        top: -50%;
-        left: -50%;
-        width: 200%;
-        height: 200%;
-        background: radial-gradient(
-          circle,
-          rgba(87, 188, 151, 0.1) 0%,
-          transparent 70%
-        );
-        animation: rotate 30s linear infinite;
-        z-index: 1;
       }
 
       .form-container {
-        max-width: 600px;
+        max-width: 800px;
         margin: 0 auto;
         position: relative;
-        z-index: 2;
       }
 
       .form-container h2 {
         font-size: 3rem;
         text-align: center;
         margin-bottom: 50px;
-        background: linear-gradient(135deg, var(--light), var(--primary));
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
+        color: #333;
       }
 
       .form-group {
@@ -716,21 +636,19 @@
       .form-group textarea {
         width: 100%;
         padding: 20px;
-        background: rgba(255, 255, 255, 0.05);
-        border: 2px solid rgba(87, 188, 151, 0.2);
+        background: #fff;
+        border: 2px solid #ddd;
         border-radius: 10px;
-        color: white;
+        color: #333;
         font-size: 1rem;
         transition: all 0.3s ease;
-        backdrop-filter: blur(5px);
       }
 
       .form-group input:focus,
       .form-group textarea:focus {
         outline: none;
         border-color: var(--primary);
-        background: rgba(255, 255, 255, 0.08);
-        box-shadow: 0 0 20px rgba(87, 188, 151, 0.3);
+        box-shadow: 0 0 20px rgba(87, 188, 151, 0.2);
       }
 
       .form-group label {
@@ -738,7 +656,7 @@
         top: 50%;
         left: 20px;
         transform: translateY(-50%);
-        color: rgba(255, 255, 255, 0.6);
+        color: #666;
         font-size: 1rem;
         transition: all 0.3s ease;
         pointer-events: none;
@@ -757,7 +675,7 @@
         left: 10px;
         font-size: 0.85rem;
         color: var(--primary);
-        background: rgba(10, 10, 10, 0.9);
+        background: #f5f5f5;
         padding: 0 10px;
       }
 
@@ -799,16 +717,31 @@
         box-shadow: 0 10px 30px rgba(87, 188, 151, 0.4);
       }
 
+      /* Footer */
+      footer {
+        color: #fff;
+        text-align: center;
+        padding: 60px 20px;
+        font-size: 0.9rem;
+        position: relative;
+      }
+
+      footer p {
+        position: relative;
+        z-index: 1;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+        font-weight: 500;
+        background: rgba(0, 0, 0, 0.7);
+        display: inline-block;
+        padding: 10px 30px;
+        border-radius: 5px;
+      }
+
       /* Responsive */
       @media (max-width: 968px) {
         .hero {
           min-height: auto;
-          padding: 80px 0 40px;
-        }
-
-        .hero-grid {
-          grid-template-columns: 1fr;
-          gap: 40px;
+          padding: 100px 0 60px;
         }
 
         .hero-content {
@@ -817,7 +750,8 @@
 
         .hero-title {
           font-size: 2rem;
-          margin-bottom: 15px;
+          margin-bottom: 20px;
+          padding: 0 10px;
         }
 
         .hero-subtitle {
@@ -831,45 +765,15 @@
         }
 
         .video-container {
-          order: 1;
           max-width: 100%;
-          margin: 0 auto 40px;
-        }
-
-        .hero-text {
-          order: 2;
-          text-align: center;
         }
 
         .possibilities-box {
-          text-align: left;
-        }
-
-        .possibilities-box h3 {
-          text-align: center;
-        }
-
-        .hero-text ul {
-          text-align: left;
-          max-width: 600px;
-          margin: 0 auto;
-        }
-
-        .hero-text p {
-          font-size: 1.1rem;
-          margin-bottom: 30px;
+          padding: 30px 20px;
         }
 
         .personal-message {
-          max-width: 500px;
-          margin: 0 auto 30px;
-        }
-
-        .cta-button {
-          display: block;
-          text-align: center;
-          margin: 0 auto;
-          max-width: 300px;
+          max-width: 90%;
         }
 
         .scroll-indicator {
@@ -884,10 +788,6 @@
 
         .hero-content {
           padding: 0 15px;
-        }
-
-        .hero-grid {
-          gap: 30px;
         }
 
         .hero-title {
@@ -910,29 +810,24 @@
 
         .possibilities-box {
           padding: 20px;
-          margin-bottom: 25px;
+          margin-bottom: 30px;
         }
 
         .possibilities-box h3 {
           font-size: 1.4rem;
-          margin-bottom: 15px;
-        }
-
-        .hero-text p {
-          font-size: 1rem;
-          line-height: 1.6;
           margin-bottom: 20px;
         }
 
-        .hero-text ul li {
+        .possibilities-box ul li {
           font-size: 0.95rem;
-          margin-bottom: 12px;
+          margin-bottom: 15px;
         }
 
         .personal-message {
-          padding: 0px 10px;
+          padding: 15px 20px;
           gap: 15px;
-          margin-bottom: 25px;
+          margin-bottom: 30px;
+          max-width: 100%;
         }
 
         .message-icon {
@@ -957,8 +852,7 @@
         }
 
         .video-container {
-          width: 100%;
-          max-width: 100%;
+          margin-bottom: 40px;
         }
 
         .video-wrapper {
@@ -986,12 +880,6 @@
           height: 35px;
           top: 15px;
           right: 15px;
-        }
-
-        .cta-button {
-          padding: 15px 30px;
-          font-size: 1rem;
-          max-width: 100%;
         }
 
         .form-section {
@@ -1050,8 +938,9 @@
 
       <div class="hero-content">
         <h1 class="hero-title">
-          Dr Pradeep Albert, Revolutionary Stem Cell Therapy Awaits Your
-          Patients
+          Dr Pradeep Albert,<br />
+          Revolutionary Stem Cell Therapy<br />
+          Awaits Your Patients
         </h1>
         <h2 class="hero-subtitle">
           When Conventional Medicine Reaches Its Limits, We Begin
@@ -1064,67 +953,68 @@
           challenging patients.
         </p>
 
-        <div class="hero-grid">
-          <div class="hero-text">
-            <div class="possibilities-box">
-              <h3>Unlock New Possibilities:</h3>
-              <ul>
-                <li>
-                  <strong>Complex Cases</strong><br />Advanced therapies for
-                  conditions with limited conventional options
-                </li>
-                <li>
-                  <strong>Enhanced Outcomes</strong><br />Regenerative
-                  approaches that address root causes, not just symptoms
-                </li>
-                <li>
-                  <strong>Professional Growth</strong><br />Join physicians at
-                  the forefront of medical innovation
-                </li>
-                <li>
-                  <strong>Patient Satisfaction</strong><br />Offer hope where
-                  traditional medicine offers limitations
-                </li>
-              </ul>
-            </div>
+        <!-- Personal Message -->
+        <div class="personal-message" onclick="playAudio()">
+          <div class="message-icon"></div>
+          <div>
+            <h3 style="margin-top: 10px; margin-bottom: 10px">
+              Personal message from Jed Ryan
+            </h3>
+            <p>
+              Click to hear how we support physicians and their patients
+              together 🔊
+            </p>
+          </div>
+          <audio id="personalAudio" style="display: none">
+            <source src="personal-message.mp3" type="audio/mpeg" />
+            <source src="personal-message.ogg" type="audio/ogg" />
+          </audio>
+        </div>
 
-            <div class="personal-message" onclick="playAudio()">
-              <div class="message-icon"></div>
-              <div>
-                <h3 style="margin-top: 20px">Personal message from Jed Ryan</h3>
-                <p>
-                  Click to hear how we support physicians and their patients
-                  together 🔊
-                </p>
-              </div>
-              <audio id="personalAudio" style="display: none">
-                <source src="personal-message.mp3" type="audio/mpeg" />
-                <source src="personal-message.ogg" type="audio/ogg" />
-              </audio>
+        <!-- Video -->
+        <div class="video-container">
+          <div class="video-wrapper" onclick="openFullscreen()">
+            <img
+              src="https://img.youtube.com/vi/gliSoRriscU/maxresdefault.jpg"
+              alt="Video Thumbnail"
+              class="video-thumbnail"
+            />
+            <div class="play-button">
+              <svg viewBox="0 0 24 24" fill="white">
+                <path d="M8 5v14l11-7z" />
+              </svg>
+            </div>
+            <div class="expand-icon">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"
+                />
+              </svg>
             </div>
           </div>
+        </div>
 
-          <div class="video-container">
-            <div class="video-wrapper" onclick="openFullscreen()">
-              <img
-                src="https://img.youtube.com/vi/gliSoRriscU/maxresdefault.jpg"
-                alt="Video Thumbnail"
-                class="video-thumbnail"
-              />
-              <div class="play-button">
-                <svg viewBox="0 0 24 24" fill="white">
-                  <path d="M8 5v14l11-7z" />
-                </svg>
-              </div>
-              <div class="expand-icon">
-                <svg viewBox="0 0 24 24">
-                  <path
-                    d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"
-                  />
-                </svg>
-              </div>
-            </div>
-          </div>
+        <!-- Possibilities Box -->
+        <div class="possibilities-box">
+          <h3>Unlock New Possibilities:</h3>
+          <ul>
+            <li>
+              <strong>Complex Cases</strong><br />Advanced therapies for
+              conditions with limited conventional options
+            </li>
+            <li>
+              <strong>Enhanced Outcomes</strong><br />Regenerative approaches
+              that address root causes, not just symptoms
+            </li>
+            <li>
+              <strong>Professional Growth</strong><br />Join physicians at the
+              forefront of medical innovation
+            </li>
+            <li>
+              <strong>Patient Satisfaction</strong><br />Offer hope where
+              traditional medicine offers limitations
+            </li>
+          </ul>
         </div>
       </div>
 
@@ -1181,6 +1071,11 @@
         </form>
       </div>
     </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 Stem Cell Medical Center. All Rights Reserved.</p>
+    </footer>
 
     <script>
       // Remove loader after page loads
